@@ -1,7 +1,7 @@
 <h1>RMAX-notes backend</h1>
 <h2>Cursos</h2>
-<p>💻 Curso NodeJS httpsyoutube.complaylistlist=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4Bp</p>
-<p>💻 Curso API NodeJS+Typescript httpsyoutube.complaylistlist=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKhp</p>
+<p>💻 <a href="https://youtube.com/playlist?list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B" target="_blank">Curso NodeJS</a> </p>
+<p>💻 <a href="https://youtube.com/playlist?list=PLz_YTBuxtxt6_Zf1h-qzNsvVt46H8ziKh" target="_blank"> Curso API NodeJS+Typescript</a> </p>
 <h2>Tecnologias</h2>
 <ul>
 <li>💻NodeJS</li>
