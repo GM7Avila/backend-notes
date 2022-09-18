@@ -36,7 +36,7 @@ O conjunto de variáveis e seus valores que existem em um determinado tempo é c
 
 #### 2. Parâmetro
 - Definido na declaração da função/método. 
-- #Parâmetro é a variável que irá receber um valor em uma #function(ou [[Método]])
+- #Parâmetros são as variáveis que irão receber um valor em uma #function (ou [[Método]])
 - Não se passa parâmetros, passa argumentos.
 - Dizems que uma função é ==parametrizada==, quando é definida por meio de seus parâmetros as informações que virão posteriormente.
 - Todos os parâmetros são nomeados
