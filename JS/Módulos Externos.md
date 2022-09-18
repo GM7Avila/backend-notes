@@ -1,4 +1,4 @@
-# Módulos
+# Módulos Externos
 Criar um módulo externo das funções  para tornar o código mais limpo:
 
 - criar o arquivo: ``/functions/soma.js`` e atribuir a variável soma à função que retorna a+b 
