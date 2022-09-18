@@ -46,7 +46,6 @@ app.get('/ola/:cargo/:nome/:cor', function(req,res){
 ```
 
 ## Objetos de requisição
-``req`` e ``res`` do, são [[objeto]] de requisição e resposta em uma função de [[middleware]] do express.
+``req`` e ``res`` do, são [[Objeto]] de requisição e resposta em uma função de [[middleware]] do express.
 - ``req`` - receber dados do protocolo
 - ``req.params`` - mostrar os parâmetros
-

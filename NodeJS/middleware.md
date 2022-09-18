@@ -1,5 +1,5 @@
 # Middleware
-- Funções de Middleware são funções que tem acesso ao *[[objeto]] de solictação* (ex.: `req`), o *objeto de resposta* (ex.: `res`), e a ==próxima função de middleware== no **ciclo** solicitação-resposta do aplicativo.
+- Funções de Middleware são funções que tem acesso ao *[[Objeto]] de solictação* (ex.: `req`), o *objeto de resposta* (ex.: `res`), e a ==próxima função de middleware== no **ciclo** solicitação-resposta do aplicativo.
 - A próxima função de middleware é comumente denotada por uma variável chamada ``next``.
 - Funções de middleware podeme executar as seguintes tarefas:
   

@@ -28,6 +28,7 @@ sequelize.authenticate().then(function(){
 ```
 
 ## Criando #Models 
+- Referência da tabela dentro do sequelize
 ```js
 const Postagem = sequelize.define('postagens', {
 	titulo: {
