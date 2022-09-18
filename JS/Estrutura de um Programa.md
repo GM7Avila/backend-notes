@@ -1,4 +1,4 @@
-# 02. Estrutura do Programa
+# Estrutura do Programa
 
 -   Expressão: um fragmento de código que produz algum valor.
 ----
