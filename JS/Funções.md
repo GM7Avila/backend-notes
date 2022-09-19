@@ -92,6 +92,7 @@ function example() {
 
 --- 
 ## Pilha de Chamadas
+#pilha
 ```js
 function greeting(){
 	sayHi();
@@ -151,4 +152,101 @@ console.log(power(4, 3));
 ---
 
 ## Closure
+#closure
 - O que acontece com as variáveis locais quando a função que criou não está mais ativa?
+- Clousure é quando uma função "lembra" de seu escopo léxico, mesmo quando a função é executada fora desse [[escopo léxico]] 
+
+**Exemplo**
+``escopo``
+```js
+let x = 50;
+
+function somarXMais3(){
+	return x+3;
+}
+
+module.exports = somarXmais3(); //exportar a função
+```
+``modulo``
+```js
+const somarXMais3 = require('./escopo')
+
+let x = 100;
+console.log(somarXMais3());
+
+// -> a função "lembra" de seu escopo, logo usa o x de ./escopo
+```
+
+https://www.youtube.com/watch?v=xME2TcbxiNo
+
+- isso também se aplica à variáveis:
+```js 
+function wrapValue(n) { 
+	var localVariable = n; 
+	return function() { return localVariable; }; 
+} 
+var wrap1 = wrapValue(1); var wrap2 = wrapValue(2); console.log(wrap1()); 
+// → 1 
+console.log(wrap2()); 
+// → 2
+```
+- function "congle" o código que está em seu corpo e envolve em um pacote
+```js
+function multiplier(factor) { 
+	return function(number) { 
+		return number * factor; }; 
+} 
+
+var twice = multiplier(2); 
+console.log(twice(5)); 
+// → 10
+```
+- No exemplo, `multiplier` retorna um pedaço de código "congelado" que fica armazenado na variável `twice`. 
+- A última linha do exemplo chama o valor armazenado nessa variável, fazendo com que o código "congelado" (`return number * factor;`) seja executado. 
+- Ele continua tendo acesso à variável `factor` que foi criada na chamada de `multiplier` e, além disso, tem acesso ao argumento que foi passado a ele (o valor 5) por meio do parâmetro `number`.
+
+---
+
+## Recursão
+#recursão
+- Uma função que invoca a si mesma é denomida **função recursiva**.
+
+Toda função recursiva tem duas regras:
+	1. invoca a si mesma
+	2.  tem dentro de si, uma estratégia para que pare de ser invocada #basecase
+
+Se não pensarmos em uma **base case**, a função cai em um loop, como no exemplo:
+````js
+function dontDoThat(value) {
+	return dontDoThat(value);
+}
+````
+
+Para elaborar a **base case** devemos primeiro entender o valor que é passado por argumento, exemplo:
+- decrementando valor
+```js
+const getFactorial = number => {
+	let factorial = 1;
+	
+	for (let i = number; i>= 1; i--){
+		factorial = factorial * i
+	} 
+	
+	return factorial
+}
+
+export default getFactorial
+```
+
+
+```
+
+```js
+function power(base, exponent) { 
+	if (exponent == 0) return 1; 
+	else return base * power(base, exponent - 1); 
+} 
+
+console.log(power(2, 3)); // → 8
+```
+
