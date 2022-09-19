@@ -209,7 +209,7 @@ console.log(twice(5));
 
 ## Recursão
 #recursão
-- Uma função que invoca a si mesma é denomida **função recursiva**.
+- Uma função que invoca a si mesma é denomida [Função recursiva](Iteratividade%20x%20Recursividade.md).
 
 Toda função recursiva tem duas regras:
 	1. invoca a si mesma
@@ -238,15 +238,66 @@ const getFactorial = number => {
 export default getFactorial
 ```
 
-
-```
-
+### Fatorial em JavaScript
+- Abaixo, temos um exemplo simples de como se calcular o fatorial (n!) de um número (n), através de uma [função iterativa](Iteratividade%20x%20Recursividade.md)
 ```js
-function power(base, exponent) { 
-	if (exponent == 0) return 1; 
-	else return base * power(base, exponent - 1); 
+function fatorial(n){
+
+    var result = n;
+
+    for(var i=1; i<n ; i++){
+
+  
+
+        // 4 * (3) -> 12[4 * 3] * (2) -> 24 [(4*3) * 2 ] * 1 => 24
+
+        result = result * (n-i)
+
+    }
+    
+    return result;
 } 
 
-console.log(power(2, 3)); // → 8
+console.log(fatorial(4));
 ```
 
+
+#### Aplicando Recursividade à iteratividade
+- Agora veremos como implementar a recursividade para calcular o fatorial, ou seja, chamaremos a função dentro de si mesma no código:
+```js
+function fatorialRec(n){
+	if(n === 0) return 1;
+	if(n === 1) return 1;
+	return n * fatorialRec(n-1);
+	
+	//numero vezes o fatorial dele menos 1
+	// 4! -> 4 x 3!
+	// 3! -> 3 x 2!
+	// 2! -> 2 X 1!
+	// 1! -> 1
+	// 0! -> 1
+}
+```
+
+- O mesmo conceito pode ser aplicado para resolvermos recursivamente a [[Sequência de Fibonacci]] 
+```js
+function fibo(n){
+	if (n === 1) return 1;
+	if (n === 2) return 2;
+	return fibo(n-1) + fibo(n-2);
+	
+	//    1   2   3   4   5   6   7   8   9
+	//   [01, 02, 03, 05, 08, 13, 21, 34, 55]
+}
+
+fibo(7);
+// => 21
+```
+
+- As aplicações recursivas no geral, são o mais próximo do que podemos chegar das definições matemáticas, em forma de funções.
+
+> Video Aula:  https://www.youtube.com/watch?v=H5u1dOoCPnc
+
+> Quicksort em Javascript: https://www.youtube.com/watch?v=TpWk0e0ayco
+
+---

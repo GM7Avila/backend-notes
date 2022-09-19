@@ -21,7 +21,7 @@ O conjunto de variáveis e seus valores que existem em um determinado tempo é c
 ---
 ## Função
 #function
--   Executar uma função é denominado **invocar / chamar ou aplicar**.
+-   Executar uma [função](./Funções) é denominado **invocar / chamar ou aplicar**.
 -   Os valores passados pelas funções são chamados de #argumentos.
 -   A função define o parâmetro.
 -   O código de chamada passa o argumento a esse parâmetro.
