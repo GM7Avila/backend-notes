@@ -5,12 +5,16 @@ app.get('/', function(req, res){
     res.send('Welcome to our app!');
 });
 
-app.get('/sobre', function(req, res){
+app.get('/about', function(req, res){
     res.send('Our page About');
 })
 
 app.get('/blog', function(req, res){
     res.send('Welcome to our blog');
+})
+
+app.get('/hello/:name/:job', function(req, res){
+    res.send('<h1>Hello ' + req.params.name + '</h1><br><h2>You are a ' + req.params.job + '</h2>');
 })
 
 app.listen(8081, function(){
