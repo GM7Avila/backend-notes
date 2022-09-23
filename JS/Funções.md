@@ -301,3 +301,83 @@ fibo(7);
 > Quicksort em Javascript: https://www.youtube.com/watch?v=TpWk0e0ayco
 
 ---
+## Funções Crescentes
+### Exemplo: Farm
+Escrever um programa que comporte me uma string de três palavras o número de galinhas e vacas em uma fazenda, permitindo no máximo 3 dígitos. Ou seja, adicionamos zeretos antes de ambos os números que não ocupam três dígitos: `003`, `033`, `999`.
+
+```js
+function printFarmInventory(cows, chickens) { 
+	var cowString = String(cows); 
+	while (cowString.length < 3) 
+		cowString = “0” + cowString; 
+	console.log(cowString + “ Cows”); 
+	var chickenString = String(chickens); 
+	while (chickenString.length < 3) 
+		chickenString = “0” + chickenString; 
+	console.log(chickenString + “ Chickens”); 
+} 
+printFarmInventory(7, 11);
+```
+
+Aprimorando...
+```js
+var cowString =  printFarmInventory(2);
+var chickenString =  printFarmInventory(11);
+var pigString =  printFarmInventory(25);
+
+function printFarmInventory(theString){
+    var theString = String(theString);
+    while (theString.length < 3)
+        theString = '0' + theString;
+    console.log(theString);
+}
+```
+
+Aprimorando...
+```js
+function zeroPad(number, width) {
+  var string = String(number);
+  while (string.length < width)
+    string = “0” + string;
+  return string;
+}
+
+function printFarmInventory(cows, chickens, pigs) {
+  console.log(zeroPad(cows, 3) + “ Cows”);
+  console.log(zeroPad(chickens, 3) + “ Chickens”);
+  console.log(zeroPad(pigs, 3) + “ Pigs”);
+}
+
+printFarmInventory(7, 16, 3);
+```
+
+- ``.length`` ao valor de uma ``string`` forcene o **tamanho**(quantidade de caracteres) dela.
+- A repetição ``while`` continua adicionando zeros no início da ``stirng`` até que o número de caracteres seja pelo menos três.
+
+---
+
+## Funções e Efeitos Colaterais Crescentes
+Funções no geral podem ser dividas entre:
+- funções que produzem um efeito colateral;
+- funções que retornam um valor;
+
+--- 
+
+## Resumo do Resumo
+- ``function`` pode ser usada para criar uma expressão em si, ou como declaração para dar função á uma variável.
+```js
+// Create a function value f
+var f = function(a) {
+  console.log(a + 2);
+};
+
+// Declare g to be a function
+function g(a, b) {
+  return a * b * 3.5;
+}
+```
+
+- [ ] Revisar como funcionam os escopos locais
+
+- parâetros e variáveis declaradas dentro de uma função são locais àquela função, recriando toda vez que a função é invocada, e não são acessíveis fora da função.
+- funções declaradas dentro da função, tem acesso ao escopo local das funções externas que as envolvem.

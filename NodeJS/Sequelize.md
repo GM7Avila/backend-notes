@@ -4,6 +4,7 @@
 - **ORM** (Object Relational Mapper) - Promise - para NodeJS.
 - Sistema que abstrai toda a camada do banco de dados;
 - Facilita a geração de tabelas e o trabalho com banco de dados no geral;
+- É instalado no diretório onde esta trabalhando.
 
 ## Instalação 
 ![[Pasted image 20220916223230.png]]
@@ -41,7 +42,7 @@ const Postagem = sequelize.define('postagens', {
 }) Postagem.sync({force: true}) 
 //função sincroniza o model com o MySQL - gerar tabela Postagem
 ```
-
+- basta rodar o código com o Node pelo terminal e o sequilize cria a tabela automaticamente:
 ![[Pasted image 20220916223702.png]]
 Acessando tabela...
 ![[Pasted image 20220916223721.png]]
@@ -49,3 +50,18 @@ Acessando tabela...
 O Sequelize por padrão:
 - cria uma linha para ID da tabela;
 - cria a linha createdAt, que indica a data que foi criada e cria linha updatedAt, que indica quando foi o último update feito
+
+ao final comente // a linha de código: ``.sync({force: true})
+
+## Criando elementos da tabela
+
+```js
+Usuario.create({
+	nome: "Victor",
+	sobrenome: "Lima",
+	idade: 20,
+	email: "email@email.com"
+})
+```
+
+- ao rodar no node o Usuario é inserido.

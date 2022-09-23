@@ -4,6 +4,9 @@
 - Aplicações web back-end
 - repositório de pacotes npm
 
+## Instalando do Diretório do projeto
+``npm install express --save
+
 ## Criando Rotas
 ```js
 const express = require("express");
