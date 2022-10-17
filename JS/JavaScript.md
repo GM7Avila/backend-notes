@@ -7,7 +7,7 @@ Resumo do Livro: **Eloquent Javascript**
 03. [[Funções]]
 04. [[Pilha]]
 05. [[Estrutura de dados]]
-6. 
+06. 
 ---
 Ferramentas Javascript
 01. [[NodeJS]]

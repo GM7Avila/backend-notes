@@ -8,6 +8,15 @@
 -   O operador = pode ser usado a qualquer hora em variáveis existentes para desconectá-las de seu valor atual e então apontá-las para um novo;
 -   Variáveis são tentáculos e não caixas, elas não guardam valores e sim os agarram.
 
+### var, let e const
+1. var -> variável global
+2. let -> variável local
+3. const -> constante (mesmo escopo do let)
+
+#### var/let x const
+- não pode-se reatribuir algo á uma constante; 
+- exceto para objetos (pois podemos alterar suas propriedades, e não o seu tipo: Objeto)
+
 ---
 ## Palavras-chave e Palavras-reservadas
 #palavras-reservadas
@@ -144,6 +153,30 @@ for (var number = 0; number <= 12; number = number + 2)
 //   … etcetera
 ```
 
+#### for of
+- forma de iterar ([[iteração]]) passar por todos os elementos
+- ex.1) podemos declarar novos elementos a partir de for of
+```js
+const array1 = ['a', 'b', 'c'];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+```
+- ao invés de:
+```js
+const array1 = ['a', 'b', 'c'];
+
+for (let i=0; i<array1.length; i++){
+	console.log(array1[i])
+}
+
+```
+
 ### break
 ```js
 for (var current = 20; ; current++) {
@@ -203,4 +236,3 @@ console.log(string);
 
 --- 
 
-## Matriz

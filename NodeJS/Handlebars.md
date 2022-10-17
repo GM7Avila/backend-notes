@@ -1,4 +1,5 @@
 # Handlebars
+HTML DINÂMICO COM JS
 ## Instalando pelo npm no terminal 
 - ``npm install --save express-handlebars``
 

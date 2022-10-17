@@ -1,0 +1,2 @@
+https://insomnia.rest/
+Insomnia is **a free cross-platform desktop application that takes the pain out of interacting with and designing HTTP-based APIs**. Insomnia combines an easy-to-use interface with advanced functionality like authentication helpers, code generation, and environment variables.

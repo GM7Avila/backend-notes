@@ -2,6 +2,7 @@
 ---
 01. [[HTTP]]
 02. [[Express]]
-03. [[Nodemon]]
-04. [[Sequelize]]
-05. [[Handlebars]]
+03. [[NestJS]]
+04. [[Nodemon]]
+05. [[Sequelize]]
+06. [[Handlebars]]

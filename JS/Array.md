@@ -96,4 +96,4 @@ console.log(nomes);
 ![[Pasted image 20220923111139.png]]
 - O primeiro símbolo é referente aos métodos, já o segundo ás propriedades
 
-- método vs propriedade (função?)
+- método vs propriedade -> [[Método]]
