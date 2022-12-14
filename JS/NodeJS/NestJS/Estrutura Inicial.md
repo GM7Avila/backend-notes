@@ -1,4 +1,16 @@
 # Diretórios
+
+## > 📁 dist
+- compilação do projeto;
+- NestJS é baseado em Typescript, o código é compilado para Javascript através dos arquivos na pasta *dist* para a comunicação com o NodeJS; 
+
+## > 📁 node_modules
+- dependências do NodeJS
+
+## > 📁 test
+- arquivos de teste
+- onde fica a configuração do [[Jest]]
+
 ## > 📁 src
 **pasta de código**
 - app.controller.spects
@@ -21,7 +33,7 @@
 - cada controlador tem uma ou mais rotas atreladas a ele... 
 	- exemplo: controler responsável para requisições do recurso de usuários, cursos, etc.
 	- as rotas são dadas por meio dos decorators (@);
-	[[app.controler.ts]]
+	[[app.controller.ts]]
 ```ts
 //>>>>>>>>>    app.controler.ts
 
@@ -56,3 +68,15 @@ export class AppService {
 
 ## > 📁 test
 - ``nest-cli.json`` => arquivo responsável por manter meta-dados para organizar, construir e encontrar projetos estruturados com nest, atualizado **automaticamente** conforme recursos serão incluidos no projeto por meio do cli. 
+
+---
+
+  🚨**note!** em `packed.json`, você poderá notar que há tanto o comando (no cli) de "`"start" : "nest start"`" quanto `"start:dev" : "nest start --watch"`; a diferença, está que, utilizando o `nest start --watch`, utilizamos a flag `--watch`, responsável por verificar se há alterações no código, e recompila-lo de acordo.
+> 	**npm run start:dev**
+
+---
+### module.ts
+
+- maneira eficaz de organizar os componentes;
+- cada módulo encapsula um conjunto de recursos;
+- multiplos [[app.module.ts]] 

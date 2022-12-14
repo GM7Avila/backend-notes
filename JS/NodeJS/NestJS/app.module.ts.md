@@ -29,3 +29,28 @@ import { Module } from '@nestjs/common';
 ```ts
 import { AppController } from './app.controller';
 ```
+
+---
+# Trabalhando com Módulos
+
+## Criando um módulo
+- cli: ``nest g module nomeDoModulo`` 
+- estrutura básica:
+  
+```ts
+import { Module } from '@nestjs/common';
+
+@Module( {
+	controllers: [], //objeto que importa os controllers
+	providers: [] //objeto que importa os serviço
+} )
+
+export class nomeDoModulo
+```
+
+- todas as informações no app.module.ts referente aos jogos, ficarão em um módulo próprio.
+![[Pasted image 20221101075735.png]]
+
+![[Pasted image 20221101082056.png]]
+
+![[Pasted image 20221101082125.png]]

@@ -20,6 +20,7 @@ console.log(carro.marca);
 console.log(carro.andar());
 
 ```
+- É possível atribuir um valor a uma propriedade usando o operador `=` , isso irá substituir o valor de uma propriedade, caso ela exista, ou criar uma nova propriedade no objeto se não existir.
 
 ## Objeto dentro de Objeto
 - Acessando objetos dentro de objetos

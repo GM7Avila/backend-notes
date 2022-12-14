@@ -13,6 +13,8 @@ export class AppService {
 # Services
 
 ## Trabalhando com serviços
+
+Toda a regra de negócio é implementada no serviço:
 Serviços são usados para isolar a lógica de negócio nos controllers
 - reutilização do código em mais de uma parte da aplicação (injetando na classe que desejamos utilizar);
 
@@ -39,13 +41,13 @@ export class GamesService {
 - para injetar o serviço *GameService* em um controller, usamos no cotroller um [[Método]] construtor que será responsável por receber a **instância** desse serviço.
 - essa instância é criada com o [[padrão singleton]], garantindo que existirá apenas uma única instância a cada siclo da aplicação.
 
-- para isso devemos criar um método *constructor* no nosso arquivo [[app.controler.ts]] em @Controller:
+- para isso devemos criar um método *constructor* no nosso arquivo [[app.controller.ts]] em @Controller:
 ```ts
 @Controller('gameList')
 export class gamesController //export -> usar em outros locais 
 	constructor(private readonly gamesService : GamesService){
 	//classe constructor(private readonly nome : tipo da variável)
-   }
+ }
 ```
 
 - criando uma entidade para os jogos: 
@@ -59,7 +61,7 @@ export class Game{
 }
 ```
 
-- a partir desse modelo(classe), podemos instanciar o objeto em ``game.services.ts``:
+- a partir desse modelo(classe), podemos instanciar o objeto: ``game.services.ts``:
 ```ts
 import { Injectable } from '@nestjs/common';
 import { Game } from './entities/game.entity'
@@ -164,3 +166,4 @@ export class GamesService {
 	//ainda não definido o que será passado dentro da função então usamos :any
    ```
 - incluimos no array ``game`` a estrutura enviada em `createCourseDto` através do ``.push`` - mais a frente explicado com detalhe;
+

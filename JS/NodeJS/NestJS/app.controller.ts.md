@@ -19,7 +19,7 @@ export class AppController {
 # Controllers 
 
 ## 🛠️ Configurando seu Controller
-- controllers lidam com as requisições;
+- controllers lidam com as *requisições*;
 - comando para criar um controller pela cli: ``nest g controller nomeDoController`` 
 	resultado de criação pelo cli:
 	``CREATE src/nomeDoController/nomeDoController.controller.spec.ts``
@@ -43,8 +43,8 @@ import { Controller } from '@nestjs/common'
 @Controller('nomeDoController')
 export class CoursesController { }
 ```
-- o decorator @Controller define a classe como um controller do NestJS (note, é um recurso do nest - from '@nestjs/common')
-- o [[endpoint]] do controller é indicado em no parâmetro do decorator @Controller: ``@Controller('nomeDoController')`` -> é a rota (URL) para acessar os métodos desse controller.
+- o [[decorator]] @Controller define a classe como um controller do NestJS (note, é um recurso do nest - from '@nestjs/common')
+- o [[endpoint]] do controller é indicado no parâmetro do decorator @Controller: ``@Controller('nomeDoController')`` -> é a rota (URL) para acessar os métodos desse controller.
 	- ao rodar no [[insomnia]] o caminho ``'/nomeDoController'``, será procurado os métodos desse controller.
 - É necessário ter os métodos referente ao tipo de requisição que desejamos usar, exemplo, criando o método 'findAll()'
 ```ts
@@ -81,19 +81,8 @@ export class CoursesController {
 ```
 - agora o return será referente apenas à rota ``nomeDoController/list``.
 - caso a rota usada seja apenas ``nomeDoController`` será retornado o [[HTTP status code]] 404 (not found);
-- a partir disso (prefixo do controller) é possível criar novos métodos com rotas alinhadas; ou então definir as rotas em cada método (sem depender do prefixo):
-```ts
-import { Controller, Get } from '@nestjs/common'
+- a partir disso (prefixo do controller) é possível criar novos métodos com rotas alinhadas; ou então definir as rotas em cada método (sem depender do prefixo).
 
-@Controller()
-export class CoursesController {
-	
-	@Get('list')
-	findAll() { 
-		return 'Listagem de cursos';
-	}
-}
-```
 ----
 ## 🔀 Parâmetro de Rotas
 #get
@@ -128,7 +117,7 @@ export class CoursesController {
 - outra forma de trabalhar com parâmetros dinâmicos:
 ```js
 @Get(':gameID')
-    FindOne(@Param('gameID') id: string){ 
+    findOne(@Param('gameID') id: string){ 
         return {
             gameID: `${id}`
         };

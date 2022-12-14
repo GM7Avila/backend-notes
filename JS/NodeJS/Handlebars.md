@@ -151,7 +151,7 @@ const Sequelize = require('sequelize');
 ```
 - note que não é necessáro utilizar toda a estrutura HTML novamente, pois já possuímos um layout definido: ``main.handlebars``.
 
-- agora utilizamos a função ``.render`` associado ao objeto de resposta ``res``([[express]]); fornencendo como parâmetro o arquivo handlebars que desejamos **renderizar**: ``formulario``
+- agora utilizamos a função ``.render`` associado ao objeto de resposta ``res``([[Express]]); fornencendo como parâmetro o arquivo handlebars que desejamos **renderizar**: ``formulario``
 ```js
 // Criando Formulario - cadastro de post
 
