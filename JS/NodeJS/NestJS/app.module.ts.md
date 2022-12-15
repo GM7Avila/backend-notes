@@ -1,6 +1,8 @@
 ``app.module.ts``
 ``AppModule`` -> instância
 
+aclopador de controllers e services;
+
 é aonde devemos inserir os outros diversos módulos que formos criar na aplicação.
 
 esta inclusão na maior parte das vezes é feita de forma automática pelo Nest.
