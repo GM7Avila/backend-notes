@@ -1,0 +1,7 @@
+
+- Software de Controle de Versão ou VCS (Version Control Software)
+
+- VCS Centralizado/linear -> commit para o repositório central;
+- VCS Distribuído (git) -> commit para repositórios locais (versionamento local) e em seguida, um push para o repositório remoto.
+
+- Git trabalha o versionamento por snapshots dos estados das versões dos arquivos.
