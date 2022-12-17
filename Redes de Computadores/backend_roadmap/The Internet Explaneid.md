@@ -81,7 +81,7 @@ Um resumo pessoal do conteúdo dos seguintes artigos/sites:
 7. À medida que os pacotes sobem na pilha, todos os dados de roteamento adicionados pela pilha do computador remetente (como endereço IP e número da porta) são retirados dos pacotes.
 8. Quando os dados atingem o topo da pilha, os pacotes foram reagrupados em sua forma original, "Hello computer 5.6.7.8!"
 
-## Protocolo HTTP 
+
 
 
 
