@@ -62,3 +62,26 @@ Um resumo pessoal do conteúdo dos seguintes artigos/sites:
 	- Dados reais - um pacote pode conter até 64 kilobytes de dados (aproximadamente 20 páginas de texto simples).
 - Caso um roteador de internet esteja congestionado, ele descarta os pacotes para melhorar seu desempenho.
 - É responsabilidade do computador remetente detectar que um pacote não chegou ao seu destino e solicitar outra cópia.
+
+## Pilhas e Pacotes de protocolo
+- Protocolos geralmente são integrados ao *Sistema Operacional do computador* e são utilizados na comunicação de computadores na rede.
+- A pilha de protocolos utilizada na rede é chamada de **TCP/IP** (devido aos dois principais protocolos de comunicação usados - Transmission Control Protocol/Internet Protocol)
+![[Pasted image 20221216201313.png]]
+
+- Exemplo: O computador de IP 1.2.3.4 deseja enviar um "Hello computer!" para o computador de IP 5.6.7.8?
+
+![[ruswp_diag2.gif]]
+
+1. Se a mensagem a ser enviada for longa, cada camada de pilha pela qual a mensagem passa pode dividi-la em pedaços menores de dados. Isso ocorre porque os dados enviados pela Internet (e pela maioria das redes de computadores) são enviados em *blocos gerenciáveis*. Na Internet, esses blocos de dados são conhecidos como **pacotes** .
+2. Os pacotes passariam pela Camada de Aplicação e continuariam na camada TCP. A cada pacote é atribuído um **número de porta** . As portas serão explicadas posteriormente, mas basta dizer que muitos programas podem estar usando a pilha TCP/IP e enviando mensagens. Precisamos saber qual programa no computador de destino precisa receber a mensagem porque ele estará escutando em uma porta específica.
+3. Depois de passar pela camada TCP, os pacotes seguem para a camada IP. É aqui que cada pacote recebe seu endereço de destino, 5.6.7.8.
+4. Agora que nossos pacotes de mensagens têm um número de porta e um endereço IP, eles estão prontos para serem enviados pela Internet. A camada de hardware se encarrega de transformar nossos pacotes contendo o texto alfabético de nossa mensagem em sinais eletrônicos e transmiti-los pela linha telefônica.
+5. Na outra ponta da linha telefônica, seu ISP tem uma conexão direta com a Internet. **O roteador** do ISP examina o endereço de destino em cada pacote e determina para onde enviá-lo. Freqüentemente, a próxima parada do pacote é outro roteador. Mais informações sobre roteadores e infraestrutura de Internet posteriormente.
+6. Eventualmente, os pacotes chegam ao computador 5.6.7.8. Aqui, os pacotes começam na parte inferior da pilha TCP/IP do computador de destino e seguem para cima.
+7. À medida que os pacotes sobem na pilha, todos os dados de roteamento adicionados pela pilha do computador remetente (como endereço IP e número da porta) são retirados dos pacotes.
+8. Quando os dados atingem o topo da pilha, os pacotes foram reagrupados em sua forma original, "Hello computer 5.6.7.8!"
+
+## Protocolo HTTP 
+
+
+
