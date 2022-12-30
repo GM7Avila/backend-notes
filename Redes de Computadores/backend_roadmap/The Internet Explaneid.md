@@ -52,7 +52,17 @@ Um resumo pessoal do conteúdo dos seguintes artigos/sites:
 
 ## DNS (Domain Name System)
 - O DNS é o sistema de domínio dos websites (endereços referentes ao IP do site).
-- Sistema hierárquico (subdomínios, rotas);
+- Sistema distribuído e hierárquico (subdomínios, rotas);
+
+### 1. Servidores raiz.
+### 2. Servidores Autoritativos.
+#### Domínios de primeiro Nível
+- ccTLDs (.pt, .br) - *países*
+- gTLDs (.com, .org, .info) - *genéricos*
+
+Os *computadores dos usuários* utilizam um componente chamado *resolver*, que consultam o servidor denominado *recursivo*, geralmente disponibilizado pelo *provedor da internet*. 
+
+Os servidores recursivos, consultam toda a árvore de *servidores autoritativos*, caso não haja no histórico do provedor,  ele busca os servidores raízes. Inicialmente os autoritativos ccTLDs. Caso não haja, le continua descendo as camadas até achar o endereço correto de ip e então salva no histórico para futuras buscas de domínio. 
 
 ## Pacotes
 - Package é a unidade básica de informação;
